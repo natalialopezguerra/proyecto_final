@@ -1,0 +1,271 @@
+@charset "UTF-8";
+/* General */
+.grupoBio__texto:hover {
+  background: #c4e8e1;
+  background: linear-gradient(90deg, #c4e8e1 0%, white 78%); }
+
+#decadaSesentas {
+  background-image: url("../medios/biografia_sesentas.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 30%; }
+
+#decadaSetentas {
+  background-image: url("../medios/biografia_setentas.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 60%; }
+
+#decadaOchentas {
+  background-image: url("../medios/biografia_ochentas.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 40%; }
+
+#decadaNoventas {
+  background-image: url("../medios/biografia_noventas.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 30%; }
+
+/* Mobile */
+.contenidoInterior {
+  display: flex;
+  flex-direction: column;
+  margin-right: 8%;
+  margin-left: 8%;
+  margin-top: 50px; }
+  .contenidoInterior .introBio .introBio__texto {
+    color: #8986a9;
+    text-align: center;
+    font-size: 1.1em; }
+  .contenidoInterior .introBio .introBio__img {
+    margin: 20px 0;
+    width: 100%;
+    height: auto; }
+    .contenidoInterior .introBio .introBio__img img {
+      width: 100%;
+      height: auto; }
+  .contenidoInterior .grupoBio {
+    height: 200px;
+    border-bottom: solid black 1px;
+    border-right: solid black 1px;
+    border-left: solid black 1px; }
+    .contenidoInterior .grupoBio .grupoBio__año {
+      font-size: 1.5em;
+      border-bottom: solid black 1px; }
+      .contenidoInterior .grupoBio .grupoBio__año p {
+        padding: 5px 15px; }
+    .contenidoInterior .grupoBio .grupoBio__texto p {
+      padding: 10px 15px; }
+    .contenidoInterior .grupoBio .grupoBio__texto--destacado p {
+      font-size: 1.5em;
+      text-align: center; }
+  .contenidoInterior .grupoBio__img {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .contenidoInterior .grupoBio__img img {
+      width: 100%;
+      height: auto; }
+    .contenidoInterior .grupoBio__img #imgBioPaul2 {
+      display: none; }
+    .contenidoInterior .grupoBio__img #imgBioPaul3 {
+      display: none; }
+  .contenidoInterior .grupoBio__vid {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .contenidoInterior .grupoBio__vid video {
+      width: 100%;
+      height: auto; }
+  .contenidoInterior #bioPaul {
+    overflow: hidden; }
+  .contenidoInterior .grupoBio--borde {
+    border-top: solid black 1px; }
+  .contenidoInterior .grupoBio--sinborde {
+    border-bottom: 0; }
+  .contenidoInterior .decada {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .contenidoInterior .decada .decada__titulo {
+      font-family: 'Lato', sans-serif;
+      font-size: 2em;
+      letter-spacing: 14px; }
+  .contenidoInterior #bio1969 {
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: 200px 200px;
+    grid-template-areas: "uno uno uno" "none texto texto"; }
+    .contenidoInterior #bio1969 #bioPaul {
+      grid-area: uno;
+      width: 100%;
+      border-bottom: solid black 1px;
+      border-top: solid black 1px; }
+      .contenidoInterior #bio1969 #bioPaul .grupoBio__año {
+        width: 25%; }
+      .contenidoInterior #bio1969 #bioPaul .grupoBio__img {
+        width: 75%; }
+    .contenidoInterior #bio1969 #bioPaul2 {
+      grid-area: texto;
+      width: 100%; }
+      .contenidoInterior #bio1969 #bioPaul2 .grupoBio__texto {
+        width: 100%; }
+  .contenidoInterior #bioTexto1967 {
+    border-bottom: 0; }
+
+/* 1969 */
+@media only screen and (max-width: 479px) {
+  #bio1969 {
+    display: block; } }
+
+/* Tablet */
+@media only screen and (min-width: 480px) and (max-width: 960px) {
+  .contenidoInterior .introBio {
+    margin-bottom: 20px; }
+    .contenidoInterior .introBio .introBio__texto {
+      font-size: 1.3em; }
+    .contenidoInterior .introBio .introBio__img {
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: center; }
+      .contenidoInterior .introBio .introBio__img img {
+        width: 70%;
+        height: auto; }
+  .contenidoInterior .grupoBio {
+    display: flex; }
+    .contenidoInterior .grupoBio .grupoBio__año {
+      border-bottom: 0;
+      border-right: solid black 1px;
+      width: 30%; }
+    .contenidoInterior .grupoBio .grupoBio__año--conBorde {
+      border-bottom: solid black 1px; }
+    .contenidoInterior .grupoBio .grupoBio__texto {
+      width: 70%; }
+    .contenidoInterior .grupoBio .grupoBio__texto--dos {
+      border-top: solid black 1px;
+      border-left: solid black 1px; }
+    .contenidoInterior .grupoBio .grupoBio__texto--tres {
+      border-left: solid black 1px; }
+  .contenidoInterior .grupoBio--dos {
+    display: flex;
+    justify-content: flex-end;
+    border-left: 0; }
+  .contenidoInterior .grupoBio__img {
+    display: flex;
+    justify-content: flex-end;
+    border-left: 0; }
+    .contenidoInterior .grupoBio__img img {
+      width: 70%;
+      height: auto;
+      border-left: solid black 1px; }
+  .contenidoInterior .grupoBio__vid {
+    display: flex;
+    justify-content: flex-end;
+    border-left: 0;
+    border-bottom: 0; }
+    .contenidoInterior .grupoBio__vid video {
+      width: 70%;
+      height: auto; }
+  .contenidoInterior .grupoBio__img--sinBorde {
+    border-bottom: 0; }
+  .contenidoInterior #bio1969 {
+    display: grid;
+    grid-template-columns: 30% 35% 35%;
+    grid-template-rows: 200px 200px;
+    grid-template-areas: "uno uno uno" "none texto texto"; }
+    .contenidoInterior #bio1969 #bioPaul {
+      grid-area: uno;
+      width: 100%; }
+      .contenidoInterior #bio1969 #bioPaul .grupoBio__año {
+        width: 30%;
+        border-bottom: solid black 1px; }
+      .contenidoInterior #bio1969 #bioPaul .grupoBio__img {
+        display: flex;
+        justify-content: flex-end;
+        width: 70%; }
+        .contenidoInterior #bio1969 #bioPaul .grupoBio__img img {
+          width: 100%;
+          height: auto;
+          border-left: 0; }
+    .contenidoInterior #bio1969 #bioPaul2 {
+      grid-area: texto;
+      width: 100%; }
+      .contenidoInterior #bio1969 #bioPaul2 .grupoBio__texto {
+        width: 100%; } }
+
+/* Desktop */
+@media only screen and (min-width: 961px) {
+  .contenidoInterior {
+    margin-left: 22%;
+    margin-right: 22%; }
+    .contenidoInterior .introBio {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 50px; }
+      .contenidoInterior .introBio .introBio__texto {
+        width: 60%;
+        font-size: 1.7em; }
+      .contenidoInterior .introBio .introBio__img {
+        width: 30%;
+        height: auto; }
+    .contenidoInterior .tablaBio .grupoBio {
+      display: flex;
+      width: 75%; }
+      .contenidoInterior .tablaBio .grupoBio .grupoBio__año {
+        width: 37.5%;
+        border-bottom: 0;
+        border-right: solid black 1px; }
+      .contenidoInterior .tablaBio .grupoBio .grupoBio__texto {
+        width: 75%; }
+        .contenidoInterior .tablaBio .grupoBio .grupoBio__texto p {
+          padding: 10px 25px; }
+      .contenidoInterior .tablaBio .grupoBio #bio1987 {
+        border-bottom: solid black 1px; }
+    .contenidoInterior .tablaBio .grupoBio--destacado {
+      display: flex;
+      width: 100%; }
+      .contenidoInterior .tablaBio .grupoBio--destacado .grupoBio__año {
+        width: 25%; }
+      .contenidoInterior .tablaBio .grupoBio--destacado .grupoBio__texto {
+        width: 75%; }
+    .contenidoInterior .tablaBio .bioConFoto {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      border-top: solid black 1px;
+      border-bottom: solid black 1px; }
+      .contenidoInterior .tablaBio .bioConFoto .grupoBio--sinborde {
+        width: 75%; }
+      .contenidoInterior .tablaBio .bioConFoto .grupoBio__img {
+        width: 25%;
+        border-left: 0; }
+      .contenidoInterior .tablaBio .bioConFoto .grupoBio__vid {
+        width: 25%;
+        border-left: 0; }
+      .contenidoInterior .tablaBio .bioConFoto .grupoBio__texto {
+        border-right: 0; }
+    .contenidoInterior .tablaBio .grupoBio--bordeAbajo {
+      border-bottom: 0; }
+    .contenidoInterior .tablaBio .grupoBio--dos {
+      width: 50%;
+      position: relative;
+      left: 25%; }
+    .contenidoInterior .tablaBio #bio1995 {
+      border-bottom: 0; }
+    .contenidoInterior .tablaBio #bio1998 {
+      border-top: solid black 1px; }
+    .contenidoInterior .tablaBio #bioImg1967 {
+      display: none; }
+    .contenidoInterior .tablaBio #bio1967 {
+      border-bottom: solid black 1px; }
+    .contenidoInterior .decada .decada__titulo {
+      font-size: 4em;
+      letter-spacing: 20px; } }

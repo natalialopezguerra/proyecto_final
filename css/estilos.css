@@ -1,0 +1,990 @@
+/* General */
+
+* { 
+    font-family: 'Fira Sans', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+body a {
+    text-decoration: none;
+}
+
+body ul {
+    padding-left: 0;
+}
+
+body #fondoMenu {
+    display: none;
+    z-index: 1;
+}
+
+header, footer {
+    background-color: #26b391;
+    height: 100%;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    padding: 0 10%;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+header img {
+    width: 25px;
+    height: 25px;
+}
+
+.contenidoInterior {
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 50px;
+}
+
+footer {
+    height: 40px;
+    padding-left: 10%;
+    padding-right: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15vh;
+}
+
+footer img {
+    width: 20px;
+}
+
+footer ul {
+    display: flex;
+}
+
+footer ul li {
+    margin-left: 20px;
+    transition: 0.5s;
+}
+
+footer li:hover {
+    transform: scale(1.3,1.3);
+}
+
+header a, footer p {
+    color: white;
+    font-family: 'Lato', sans-serif;
+}
+
+header a:hover {
+    color: black;
+}
+ 
+a {
+    text-transform: uppercase;
+}
+
+header a {
+    font-size: 1.2em;
+    text-transform: capitalize;
+}
+
+body h1 {
+    color: #26b391;
+    text-align: center;
+    letter-spacing: 10px;
+    font-family: 'Lato', sans-serif;
+    padding-bottom: 15px;
+    font-size: 1.8em;
+    border-bottom: solid 1px #26b391;
+    margin: 0 8%;
+    margin-top: 20px;
+}
+
+/* Menú */
+
+#fondoMenu nav {
+    margin-right: 25%;
+    margin-left: 25%;
+}
+
+#fondoMenu nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+#fondoMenu nav ul li a {
+    background-color: #c4e8e1;
+    color: black;
+    padding: 5px 10px;
+    transition: 0.5s;
+}
+
+#fondoMenu nav ul li a:hover {
+    background: rgb(137,134,169);
+    background: linear-gradient(90deg, rgba(137,134,169,1) 44%, rgba(196,232,225,1) 100%);
+    color: white;
+}
+
+#fondoMenu {
+    height: 70px;
+    padding-top: 20px;
+    position: sticky;
+    top: 0;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 80%, rgba(255,255,255,0) 100%);
+}
+
+#botonMenu {
+    display: none;
+}
+
+#navIndexMobile {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #c4e8e1e3;
+    width: 100vw;
+    height: 100vh;
+    transform: translateX(-100%);
+    transition: 0.5s;
+}
+
+#botonMenu:checked ~ #navIndexMobile {
+    transform: translateX(0%);
+}
+
+#navIndexMobile ul li a {
+    color: black;
+    text-transform: uppercase;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 1.5em;
+}
+
+#navIndexMobile ul {
+    padding-top: 60px;
+    padding-right: 60px;
+    padding-left: 60px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+}
+
+#navIndexMobile ul li {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.borde {
+    border-top: solid 1px black;
+}
+
+/* Submenú */
+
+#fondoMenu nav ul ul {
+    position: absolute;
+    display: none;
+}
+
+#fondoMenu nav ul ul li {
+    display: block;
+}
+
+#fondoMenu nav ul li:hover ul {
+    display:block;
+}
+
+#fondoMenu nav ul li:hover ul li a{
+    background-color: white;
+    color: #8986a9;
+    border: solid 1px #8986a9; 
+    font-size: 0.8em;
+}
+
+#fondoMenu nav ul li:hover ul li {
+    margin-top: 15px;
+}
+
+#fondoMenu #navIndex ul li:hover ul li {
+    margin-top: 10px;
+}
+
+#fondoMenu nav ul li:hover ul li a:hover {
+    color: white;
+}  
+
+
+
+/* Mediaqueries General + Menú y submenú */
+
+
+@media only screen and (min-width: 480px) and (max-width: 960px) {
+
+    header #menuMobile {
+        display: none;
+    }
+
+    header {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    body #fondoMenu {
+        display: block;
+    }
+
+    #fondoMenu nav {
+        margin-right: 8%;
+        margin-left: 8%;
+    }
+
+    #fondoMenu nav ul {
+        justify-content: space-around;
+    }
+
+    #fondoMenu nav ul li a {
+        font-size: 0.8em;
+    }
+
+}
+
+
+@media only screen and (min-width: 961px) { 
+
+    header #menuMobile {
+        display: none;
+    }
+
+    header {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    body #fondoMenu {
+        display: block;
+    }
+
+    #fondoMenu nav {
+        margin-right: 25%;
+        margin-left: 25%;
+    }
+
+    body h1 {
+        letter-spacing: 40px;
+        padding-bottom: 35px;
+        font-size: 4em;
+        margin: 0 5%;
+    }
+
+    .contenidoInterior {
+        margin-left: 22%;
+        margin-right: 22%;
+    }
+
+}
+
+
+/* Index */
+
+#introIndex {
+    background-image: url("../medios/linda.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+#introIndexContenido {
+    padding-top: 30vh;
+    padding-left: 6%;
+    padding-right: 6%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#introIndexContenido p {
+    display: none;
+}
+
+#introIndex h1 {
+    color: black;
+    text-align: left;
+    font-size: 2em;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    letter-spacing: 12px;
+}
+
+#contenidoAbajoIndex {
+    margin-top: 30px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.cajasIndex h2 {
+    font-family: 'Lato', sans-serif;
+    padding-bottom: 10px;
+}
+
+#exhibicionesIndex {
+    background-color: #c4e8e1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#biografiaIndex {
+    background-color: #8986a9;
+    color: white;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.cajasIndex a {
+    border-style: solid;
+    border-width: 1px;
+    padding: 3px 0px;
+    font-size: 0.8em;
+    text-align: center;
+}
+
+#exhibicionesIndex a {
+    color: black;
+    border: solid black 1px;
+    transition: 0.5s;
+}
+
+#exhibicionesIndex a:hover {
+    background: #8986a9;
+    background: linear-gradient(90deg, rgba(255,255,255,1) 44%, #8986a9 100%);
+    color: black;
+    border: solid black 1px;
+}
+
+#biografiaIndex a {
+    color: white;
+    transition: 0.5s;
+}
+
+#biografiaIndex a:hover {
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 44%, rgba(196,232,225,1) 100%);
+    color: black;
+    border: solid white 1px;
+}
+
+#citaIndex {
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    border-top: solid #26b391 1px;
+    border-bottom: solid #26b391 1px;
+    margin-top: 80px;
+}
+
+#citaIndex h3 {
+    font-family: 'Lato', sans-serif;
+    color: #26b391;
+    padding: 30px 0;
+}
+
+#slideIndex {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+}
+
+#slideIndex a {
+    margin-top: 20px;
+    width: 100%;
+    border: solid black 1px;
+    color: black;
+    padding: 3px 0px;
+    font-size: 0.8em;
+    text-align: center;
+    transition: 0.5s;
+}
+
+#slideIndex a:hover {
+    background: #8986a9;
+    background: linear-gradient(90deg, #c4e8e1 44%, #8986a9 100%);
+    color: black;
+    border: solid black 1px;
+}
+
+#cajasIndexAbajo {
+    margin-top: 80px;
+}
+
+#cajasIndexAbajo p {
+    font-size: 1.4em;
+}
+
+#contactoIndex {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: solid #c4e8e1 1px;
+}
+
+#contactoIndex a {
+    color: black;
+    border: solid #c4e8e1 1px;
+    transition: 0.5s;
+}
+
+#contactoIndex a:hover {
+    background: #8986a9;
+    background: linear-gradient(90deg, #c4e8e1 44%, #8986a9 100%);
+    color: black;
+    border: solid #c4e8e1 1px;
+}
+
+#suscripcionIndex {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: solid #8986a9 1px;
+    margin-top: 30px;
+}
+
+#suscripcionIndex form div {
+    margin-top: 15px;
+}
+
+#formularioIndex {
+    display: flex;
+    flex-direction: column;
+}
+
+#formularioIndex h3 {
+    color: #8986a9;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+#formularioIndexDatos input {
+    background-color: #c4e8e1;
+    border: 0px;
+    width: 100%;
+    height: 30px;
+}
+
+#formularioIndexDatos input:focus {
+    background: rgb(196,232,225);
+    background: linear-gradient(90deg, rgba(196,232,225,1) 80%, rgba(137,134,169,1) 100%);
+    color: #8986a9;
+}
+
+#botonSuscripcionIndex input {
+    width: 100%;
+    margin-top: 30px;
+    border: solid 1px #8986a9;
+    background-color: white;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    padding: 3px 0px;
+    transition: 0.5s;
+}
+
+#botonSuscripcionIndex input:hover {
+    background: #8986a9;
+    background: linear-gradient(90deg, #c4e8e1 44%, #8986a9 100%);
+    color: black;
+    border: solid #8986a9 1px;
+}
+
+
+/* Mediaqueries Index */
+
+@media only screen and (min-width: 480px) and (max-width: 960px) {
+
+    #introIndex {
+        position: relative;
+        top: -70px;
+    }
+
+    #introIndexContenido {
+        padding-top: 30vh;
+        padding-left: 4%;
+        width: 50%;
+    }
+    
+    #introIndex h1 {
+        font-size: 2.5em;
+    }
+
+    .cajasIndex {
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    .cajasIndex > div {
+        width: 48%;
+    }
+
+    #biografiaIndex {
+        margin-top: 0;
+    }
+
+    .carousel-item a {
+        display: none;
+    }
+
+    #slide {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    #slideIndex {
+        width: 80%;
+    }
+
+    .carousel-item h5 {
+        display: none;
+    }
+
+    #suscripcionIndex {
+        margin-top: 0;
+    }
+
+}
+
+
+@media only screen and (min-width: 961px) { 
+
+    #introIndex {
+        position: relative;
+        top: -70px;
+    }
+
+    #introIndexContenido {
+        padding-top: 25vh;
+        padding-left: 4%;
+        width: 42%;
+        height: 90vh;
+    }
+
+    #introIndexContenido p {
+        display: block;
+        color: white;
+    }
+    
+    #introIndex h1 {
+        font-size: 3em;
+        margin-bottom: 30px;
+    }
+    
+    #introIndexContenido > div > p {
+        font-size: 1.5em;
+        padding-top: 5px;
+    }
+    
+    #introIndexContenido > p {
+        letter-spacing: 10px;
+        font-size: 0.8em;
+        border-top: solid white 1px;
+        padding-top: 10px;
+    }
+
+    .cajasIndex {
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    .cajasIndex > div {
+        width: 48%;
+    }
+
+    #biografiaIndex {
+        margin-top: 0;
+    }
+
+    #citaIndex {
+        display: flex;
+        justify-content: center;
+    }
+    
+    #citaIndex h3 {
+        width: 80%;
+        font-size: 2.8em;
+    }
+
+    #slide {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    #slideIndex {
+        width: 80%;
+    }
+
+    #slideIndex > a {
+        display: none;
+    }
+
+    #suscripcionIndex {
+        margin-top: 0;
+    }
+
+    .carousel-caption h5 {
+        font-family: 'Lato', sans-serif;
+        font-size: 2.8em;
+        letter-spacing: 8px;
+    }
+
+    #slide #slideIndex #carouselExampleCaptions .carousel-item .carousel-caption a {
+        border: solid 1px white;
+        padding-bottom: 3px;
+        padding-top: 3px;
+        padding-right: 40%;
+        padding-left: 40%;
+        font-size: 0.8em;
+        color: white;
+        transition: 0.5s;
+    }
+
+    #slide #slideIndex #carouselExampleCaptions .carousel-item .carousel-caption a:hover {
+        background: rgb(255,255,255);
+        background: linear-gradient(90deg, rgba(255,255,255,1) 44%, rgba(196,232,225,1) 100%);
+        color: black;
+    }
+
+}
+
+/* Exhibiciones */
+
+#exhibicionesActuales, #exhibicionesPrevias {
+    display: flex;
+    flex-direction: column;
+    border: solid 1px #8986a9;
+}
+
+#exhibicionesActuales h2, #exhibicionesPrevias h2 {
+    font-size: 1em;
+    color: #8986a9;
+    text-align: center;
+    padding: 6px 4px;
+    letter-spacing: 5px;
+    font-family: 'Lato', sans-serif;
+}
+
+#exhibicionesPrevias {
+    margin-top: 30px;
+}
+
+.tablaAño {
+    border-bottom: solid #8986a9 1px;
+    border-top: solid #8986a9 1px;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5em;
+    padding: 10px 20px;
+}
+
+.tablaNombre {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2em;
+    text-decoration: underline 1px;
+    padding: 10px 20px;
+    margin-bottom: 40px;
+}
+
+#tabla2019 {
+    border-top: solid #8986a9 1px;
+}
+
+.tablaDatos {
+    padding: 15px 20px;
+    font-size: 0.8em;
+}
+
+.tablaFondo:hover {
+    background: rgb(196,232,225);
+    background: linear-gradient(90deg, rgba(196,232,225,1) 0%, rgba(255,255,255,1) 78%);
+}
+
+/* Mediaqueries Exhibiciones */
+
+@media only screen and (min-width: 480px) and (max-width: 960px) {
+
+    .tablaExhibiciones {
+        display: grid;
+        grid-template-areas:
+         "año nombre"
+         "año datos";
+    
+       grid-template-columns: 25% 75%;
+    
+       border-top: solid 1px #8986a9;
+    
+    }
+    
+    .tablaAño {
+        grid-area: año;
+        border: 0;
+        border-right: solid #8986a9 1px;
+        font-size: 1.2em;
+        padding: 10px 10px;
+    }
+    
+    .tablaNombre {
+        grid-area: nombre;
+        font-size: 1.6em;
+        padding-top: 10px;
+        padding-left: 30px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+    }
+    
+    .tablaDatos {
+        grid-area: datos;
+        padding-top: 10px;
+        padding-left: 30px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #exhibicionesActuales h2, #exhibicionesPrevias h2 {
+        padding: 15px 0;
+        letter-spacing: 5px;
+    }
+
+}
+
+
+@media only screen and (min-width: 961px) { 
+
+    .tablaExhibiciones {
+        display: grid;
+        grid-template-areas:
+         "año nombre"
+         "año datos";
+    
+       grid-template-columns: 25% 75%;
+    
+       border-top: solid 1px #8986a9;
+    
+    }
+    
+    .tablaAño {
+        grid-area: año;
+        border: 0;
+        border-right: solid #8986a9 1px;
+        font-size: 1.8em;
+        padding: 10px 20px;
+    }
+    
+    .tablaNombre {
+        grid-area: nombre;
+        font-size: 2.2em;
+        padding-top: 10px;
+        padding-left: 100px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+    }
+    
+    .tablaDatos {
+        grid-area: datos;
+        padding-top: 10px;
+        padding-left: 100px;
+        padding-right: 30px;
+        padding-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    
+    #exhibicionesActuales h2, #exhibicionesPrevias h2 {
+        padding: 15px 0;
+        letter-spacing: 10px;
+    }
+
+}
+
+/* Contacto */
+
+#formularioContacto {
+    display: flex;
+    flex-direction: column;
+}
+
+#formularioContacto h3 {
+    color: #8986a9;
+    font-family: 'Lato', sans-serif;
+    text-align: center; 
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+#nombreContacto input, #mailContacto input {
+    height: 35px;
+    font-size: 1.2em;
+}
+
+#nombreContacto, #mailContacto, #mensaje {
+    margin-bottom: 30px;
+}
+
+#mensaje textarea {
+    font-size: 1.2em;
+    transition: 0.5s;
+}
+
+textarea {
+    background-color: #c4e8e1;
+    width: 100%;
+    border: 0;
+}
+
+#datosContacto input {
+    background-color: #c4e8e1;
+    border: 0px;
+    width: 100%;
+}
+
+#datosContacto input:focus {
+    background: rgb(196,232,225);
+    background: linear-gradient(90deg, rgba(196,232,225,1) 80%, rgba(137,134,169,1) 100%);
+    color: #8986a9;
+}
+
+#mensaje textarea:focus {
+    background: rgb(196,232,225);
+    background: linear-gradient(90deg, rgba(196,232,225,1) 90%, rgba(137,134,169,1) 100%);
+    color: #8986a9;
+}
+
+#suscribirse {
+    display: flex;
+    margin: 5% 0;
+}
+
+#suscribirse input {
+    margin: 0;
+    padding: 0;
+}
+
+.form-check-label {
+    color: #8986a9;
+    font-family: 'Lato', sans-serif; 
+    font-size: 1.4em;
+    margin-left: 10px;
+}
+
+.form-check {
+    margin: 30px 0;
+}
+
+.form-check input {
+    transition: 0.5s
+}
+
+.form-check input:focus {
+    transform: scale(1.8);
+}
+
+#suscripcionContacto {
+    display: flex;
+    justify-content: center;
+}
+
+#botonesContacto {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+#botonesContacto input {
+    background-color: #8986a9;
+    width: 48%;
+    border: solid 1px #8986a9;
+    color: white;
+    padding: 5px 0;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+#botonesContacto input:hover {
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 44%, rgba(196,232,225,1) 100%);
+    color: black;
+    border: solid 1px #8986a9;
+}
+
+#fraseContacto {
+    text-align: center;
+    font-size: 1.2em;
+    color: #8986a9;
+    margin-bottom: 40px;
+}
+
+/* Mediaqueries Contacto */
+
+@media only screen and (min-width: 480px) and (max-width: 960px) {
+
+    #fraseContacto {
+        font-size: 1.4em;
+    }
+
+}
+
+
+@media only screen and (min-width: 961px) { 
+
+    #formularioContacto h3 {
+        font-size: 1.8em;
+    }
+
+    #datosContacto {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    #nombreContacto, #mailContacto {
+        width: 48%;
+    }
+    
+    #nombreContacto input, #mailContacto input {
+        height: 50px;
+        font-size: 1.5em;
+    }
+
+    #mensaje textarea {
+        font-size: 1.5em;
+    }
+
+    #fraseContacto {
+        font-size: 2em;
+        margin-bottom: 60px;
+    }
+
+}

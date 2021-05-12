@@ -1,0 +1,123 @@
+@charset "UTF-8";
+/* Variables */
+/* Mixins */
+/* General */
+#caratulaAnimales, #caratulaPolaroids, #caratulaAutorretratos {
+  background-image: url("../medios/portfolio_animales.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+
+#caratulaPolaroids {
+  background-image: url("../medios/portfolio_polaroids.jpg"); }
+
+#caratulaAutorretratos {
+  background-image: url("../medios/portfolio_autorretratos.jpg"); }
+
+img {
+  transition: 1s; }
+
+img:hover {
+  transform: scale(1.1, 1.1); }
+
+/* Mobile */
+.portfolioSeccion {
+  margin-top: 100px; }
+
+.caratula {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .caratula .caratula__caja {
+    border: solid 1px black;
+    background-color: #c4e8e169;
+    height: 80%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    .caratula .caratula__caja .caratula__titulo {
+      width: 100%; }
+      .caratula .caratula__caja .caratula__titulo h2 {
+        border-bottom: solid 1px black;
+        text-align: center;
+        font-family: "Lato", sans-serif 300;
+        padding: 2% 0; }
+    .caratula .caratula__caja .caratula__año p {
+      padding: 5% 0;
+      text-align: center;
+      border-top: solid 1px black;
+      letter-spacing: 5px;
+      font-size: 0.8em; }
+
+.imagenes {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%; }
+  .imagenes .imagenes__cuadro {
+    border: solid 1px black;
+    padding: 10%;
+    margin-top: 30px; }
+    .imagenes .imagenes__cuadro img {
+      width: 100%;
+      height: auto; }
+    .imagenes .imagenes__cuadro h3 {
+      font-family: "Lato", sans-serif 300;
+      text-decoration: underline;
+      margin-top: 30px; }
+    .imagenes .imagenes__cuadro p {
+      margin-top: 10px; }
+  .imagenes .imagenes__cuadro--sinTitulo p {
+    margin-top: 30px; }
+
+/* Tablet */
+@media only screen and (min-width: 480px) and (max-width: 960px) {
+  .caratula .caratula__caja .caratula__titulo h2 {
+    font-size: 2.2em; }
+  .caratula .caratula__caja .caratula__año p {
+    padding: 3% 0;
+    text-align: center;
+    border-top: solid 1px black;
+    letter-spacing: 15px;
+    font-size: 1em; }
+  .imagenes {
+    flex-direction: row;
+    justify-content: space-between; }
+    .imagenes .imagenes__cuadro {
+      width: 27%;
+      padding: 2%; } }
+
+/* Desktop */
+@media only screen and (min-width: 961px) {
+  .caratula .caratula__caja {
+    height: 80%;
+    width: 80%;
+    display: flex;
+    flex-direction: row; }
+    .caratula .caratula__caja .caratula__titulo {
+      width: 50%;
+      height: 100%;
+      border-right: solid 1px black; }
+      .caratula .caratula__caja .caratula__titulo h2 {
+        font-size: 2.2em;
+        padding: 2% 0; }
+    .caratula .caratula__caja .caratula__año {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      align-items: flex-end; }
+      .caratula .caratula__caja .caratula__año p {
+        width: 100%;
+        padding-top: 5%;
+        text-align: center;
+        letter-spacing: 8px;
+        font-size: 1.2em; }
+  .imagenes {
+    flex-direction: row;
+    justify-content: space-between; }
+    .imagenes .imagenes__cuadro {
+      width: 27%;
+      padding: 2%; } }

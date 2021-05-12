@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="LINDA MCCARTNEY, LINDA EASTMAN, FOTOGRAFÍA, PORTFOLIO, BIOGRAFÍA, PAUL MCCARTNEY">
+    <meta name="description" content="Contáctese con nosotros por cualquier duda sobre las exhibiciones de Linda McCartney.">
+    <title>Linda McCartney | Contacto</title>
+    <link rel="stylesheet" href="css/estilos.css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200&family=Lato:wght@100;300&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    
+    <header>
+        <a href="index.html">Linda McCartney</a>
+        <div id="menuMobile">
+            <input type="checkbox" id="botonMenu">
+            <label for="botonMenu"><img src="medios/icono-menu.svg"></label>
+            <nav id="navIndexMobile">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li class="borde"><a href="exhibiciones.html">Exhibiciones</a></li>
+                    <li class="borde"><a href="biografia.html">Biografía</a></li>
+                    <li class="borde"><a href="portfolio.html">Portfolio</a></li>
+                    <li class="borde"><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div id="fondoMenu">
+        
+        <nav>
+            <ul>
+                <li id="inicio"><a href="index.html">Inicio</a></li>
+                <li id="exhibiciones"><a href="exhibiciones.html">Exhibiciones</a>
+                    <ul>
+                        <li><a href="exhibiciones.html">Actuales</a></li>
+                        <li><a href="exhibiciones.html #exPr">Previas</a></li>
+                    </ul>
+                </li>
+                <li id="biografia"><a href="biografia.html">Biografía</a>
+                    <ul>
+                        <li><a href="biografia.html #decadaSesentas">Sesentas</a></li>
+                        <li><a href="biografia.html #decadaSetentas">Setentas</a></li>
+                        <li><a href="biografia.html #decadaOchentas">Ochentas</a></li>
+                        <li><a href="biografia.html #decadaNoventas">Noventas</a></li>
+                    </ul>
+                </li>
+                <li id="portfolio"><a href="portfolio.html">Portfolio</a>
+                    <ul>
+                        <li><a href="portfolio.html">Animales</a></li>
+                        <li><a href="portfolio.html #portfolioPolaroids">Polaroids</a></li>
+                        <li><a href="portfolio.html #portfolioAutorretratos">Autorretratos</a></li>
+                    </ul>
+                </li>
+                <li id="contacto"><a href="contacto.html">Contacto</a></li>
+            </ul>   
+        </nav>
+
+    </div>
+
+    <h1 data-aos="fade-down" data-aos-duration="3000">Contacto</h1>
+
+    <main class="contenidoInterior" data-aos="fade-right" data-aos-duration="3000">
+
+        <div id="fraseContacto">
+            <p>Por cualquier consulta acerca de las exhibiciones, no dudes en contactarnos.</p>
+        </div>
+
+            <form id="formularioContacto">
+
+                <div id="datosContacto">
+
+                    <div id="nombreContacto">
+                        <h3>Nombre</h3>
+                        <input type="text" name="nombreContacto"/>
+                    </div>
+
+                    <div id="mailContacto">
+                        <h3>Mail</h3>
+                        <input type="email" name="mailContacto"/>
+                    </div>
+
+                </div>
+
+                <div id="mensaje">
+                    <h3>Mensaje</h3>
+                    <textarea rows="10" cols="100"></textarea> 
+                </div>
+
+                <div id="suscripcionContacto">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                        Suscribirse al newsletter
+                        </label>
+                    </div>
+                </div>
+
+                <div id="botonesContacto">
+                    <input type="reset" class="botonContacto"/>
+                    <input type="submit" class="botonContacto"/>
+                </div>
+
+            </form>
+
+    </main>
+
+    <footer>
+        <div>
+            <p>Copyright...</p>
+        </div>
+        <div>
+            <ul>
+                <li><a href="https://www.lindamccartney.com/"><img src="medios/logo-web.svg" alt="Web"></a></li>
+                <li><a href="https://www.instagram.com/lindamccartney/"><img src="medios/logo-instagram.svg" alt="Instagram"></a></li>
+                <li><a href="https://twitter.com/linmccartney?lang=es"><img src="medios/logo-twitter.svg" alt="Twitter"></a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+</html>
