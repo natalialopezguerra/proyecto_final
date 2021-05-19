@@ -95,13 +95,15 @@
     justify-content: center; }
     .contenidoInterior .decada .decada__titulo {
       font-family: 'Lato', sans-serif;
+      font-weight: 300;
       font-size: 2em;
       letter-spacing: 14px; }
   .contenidoInterior #bio1969 {
     display: grid;
     grid-template-columns: 25% 50% 25%;
     grid-template-rows: 200px 200px;
-    grid-template-areas: "uno uno uno" "none texto texto"; }
+    grid-template-areas: "uno uno uno"
+ "none texto texto"; }
     .contenidoInterior #bio1969 #bioPaul {
       grid-area: uno;
       width: 100%;
@@ -179,7 +181,8 @@
     display: grid;
     grid-template-columns: 30% 35% 35%;
     grid-template-rows: 200px 200px;
-    grid-template-areas: "uno uno uno" "none texto texto"; }
+    grid-template-areas: "uno uno uno"
+ "none texto texto"; }
     .contenidoInterior #bio1969 #bioPaul {
       grid-area: uno;
       width: 100%; }
